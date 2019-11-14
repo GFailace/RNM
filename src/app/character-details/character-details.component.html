@@ -1,0 +1,27 @@
+<div class="character">
+    <div class="back">
+        <button class="btn" title="Voltar" (click)="backUrl()">Back</button>
+    </div>
+    <div class="media">
+        <div class="image">
+            <img class="img-fluid" src="{{this.details[8]}}" class="align-self-center mr-3" alt="{{this.details[1]}}">
+        </div>
+        <div class="media-body">
+            <h3 class="mt-0">{{this.details[1]}}</h3>
+            <p>Status: {{this.details[2]}}</p>
+            <p>Species: {{this.details[3]}}</p>
+            <p>Type: {{this.details[4]}}</p>
+            <p>Gender: {{this.details[5]}}</p>
+            <p>Origin: {{this.details[6].name}}</p>
+            <p>Last Location: {{this.details[7].name}}</p>
+            <p>Appears in Episodes:</p>
+            <ul *ngIf="this.details[9].length > 1">
+                <li *ngFor="let ep of episode">{{ep.episode}} - {{ep.name}} | Air Date - {{ep.air_date}} </li>
+            </ul>
+            <ul *ngIf="this.details[9].length == 1">
+                    <li>{{this.episode[3]}} - {{this.episode[1]}} | Air Date - {{this.episode[2]}} </li>
+                </ul>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

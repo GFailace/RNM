@@ -1,0 +1,46 @@
+.back{
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+}
+.back button{
+    margin: 5px 5%;
+    background:#67bf4d;
+    color: black;
+    border-color: #67bf4d;
+}
+.back button:hover{
+    background: transparent;
+    color: #67bf4d;
+    border-color: #67bf4d;
+    transition: ease 0.2s;
+}
+.main{
+    width: 90%;
+    margin: 20px auto;
+}
+.residents{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+}
+.residents a {
+    text-decoration: none;
+}
+.residents a:hover{
+    opacity: 0.5;
+}
+
+@media(max-width: 1100px){
+    .residents{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 500px){
+    .residents{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

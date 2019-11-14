@@ -1,0 +1,25 @@
+<div class="intro">
+    <img src="./assets/rnm.jpg" alt="Ricky and Morty">
+    <h2>Hey, did you ever wanna hold a terryfold?</h2>
+    <h5>Welcome to Rick and Morty WebApp</h5>
+    <p>Here you can view information about the locations and characters of the Rick and Morty show!</p>
+    <p>Choose a location above and start the travel!</p>
+</div>
+<div class="cards">
+    <div class="card" *ngFor="let location of locations.results">
+        <div class="card-body">
+            <img class="img-fluid locImg" src="./assets/location.jpg">
+            <br>
+            <h5 class="card-title">{{location.name}}</h5>
+            <p class="card-text">Type - {{location.type}}</p>
+            <p class="card-text">Dimension - {{location.dimension}}</p>
+            <a routerLink="/location-details/{{location.id}}" class="btn" (click)="apiService.getResidentsInfo(this.baseUrl,location.id)">More
+                Info</a>
+        </div>
+    </div>
+</div>
+<div class="pagination">
+    <button class="btn" (click)="previousPage()">Previous</button>
+    <button class="btn" (click)="nextPage()">Next</button>
+</div>
+<app-footer></app-footer>

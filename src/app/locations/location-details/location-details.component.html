@@ -1,0 +1,40 @@
+<div class="back">
+    <button class="btn" (click)="backUrl()" title="Voltar">Back</button>
+</div>
+<div class="card main">
+    <div class="card-body">
+        <h2>Location Info:</h2>
+        <p class="card-title">Name - {{details.name}}</p>
+        <p class="card-text">Type - {{details.type}}</p>
+        <p class="card-text">Dimension - {{details.dimension}}</p>
+        <h3>Residents</h3>
+        <div *ngIf="noResident == true;">
+            <h4>There are no residents in this location.</h4>
+        </div>
+        <div class="residents" *ngIf="this.residents.length > 1 && noResident !== true">
+            <div class="card" *ngFor="let char of resident$ | async">
+                <a routerLink="/character-details/{{char.id}}">
+                    <img src="{{char.image}}" class="card-img-top" alt={{char.name}}>
+                    <div class="card-body">
+                        <h5 class="card-title">{{char.name}}</h5>
+                        <p class="card-text">Species - {{char.species}}</p>
+                        <p class="card-text">Status - {{char.status}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="residents" *ngIf="this.residents.length == 1">
+            <div class="card">
+                <a routerLink="/character-details/{{this.resident[0]}}">
+                    <img src="{{this.resident[8]}}" class="card-img-top" alt={{this.resident[1]}}>
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.resident[1]}}</h5>
+                        <p class="card-text">Species - {{this.resident[3]}}</p>
+                        <p class="card-text">Status - {{this.resident[2]}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

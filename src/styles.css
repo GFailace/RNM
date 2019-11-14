@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500&display=swap');
+
+router-outlet ~ * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background:#000;
+    font-family: 'Quicksand', sans-serif;
+}
+p, li{
+    color: white;
+}
+a{
+    color:#67bf4d;
+}
+a:hover{
+    color: white;
+}
+h2,h3,h4,h5{
+    color: #67bf4d;
+}
+.card{
+    background: #202329;
+    border-color: #ade0f3;
+}
+.btn{
+    background: transparent;
+    color: #67bf4d;
+    border-color: #67bf4d;
+}
+.btn:hover{
+    background: #67bf4d;
+    color: black;
+    border-color: #67bf4d;
+    transition: ease 0.2s;
+}
