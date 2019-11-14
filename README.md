@@ -1,6 +1,6 @@
 # RNM Web App
 
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versião 8.3.17 utilizando a última versão do Angular.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 8.3.17 utilizando a última versão do Angular.
 
 Neste projeto foi utilizada a API de [Rick e Morty](https://rickandmortyapi.com), como backend dos dados apresentados no app sendo retornados utilizando requisições HTTP. O método principal de cada componente está no serviço de API(api.service.ts) enquanto métodos específicos de cada componente estão distribuídos entre os mesmos. Devido ao diferente tipo de retorno da API precisei definir nas diretivas **`ngIf`** e **`ngFor`** para tratar o retorno e exibir o resultado na View, além de criar uma forma de automatizar as requisições dinamicamente à API. O maior aprendizado foi de como utilizar retorno de URLs para realizar novas requisições e como utilizar diferentes elemtos no mesmo retorno(Arrays, Objetos) de maneiras específicas no app. Caso tivesse mais tempo, poderia implementar um sistema de busca de Locations ou Characters listados para facilitar a visualização do mesmo e melhorar a função de retorno à pagina anterior.
 
